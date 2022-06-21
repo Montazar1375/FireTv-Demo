@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?><!--<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main_browse_fragment"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity"-->
+<!--    tools:deviceIds="tv"-->
+<!--    tools:ignore="MergeRootFrame" />-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBG"
+                android:layout_width="match_parent"
+                tools:src="@drawable/img_bg_home"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:src="@drawable/ic_tv_colored"
+                app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simple demo of Browse screen!"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                app:layout_constraintEnd_toEndOf="@+id/logo"
+                app:layout_constraintStart_toStartOf="@+id/logo"
+                app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="2"
+                android:foregroundGravity="center"
+                android:rowCount="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.638">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card1"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="8dp"
+                    scaleOnFocus="@{true}"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:theme="@style/Theme.MaterialComponents"
+                    tools:ignore="SpeakableTextPresentCheck" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="top"
+                        android:src="@drawable/img_leanback"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Leanback"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="8dp"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card2"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    scaleOnFocus="@{true}"
+                    android:layout_margin="8dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:theme="@style/Theme.MaterialComponents"
+                    tools:ignore="SpeakableTextPresentCheck" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="top"
+                        android:src="@drawable/img_recyclerview"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="RecyclerView"
+                        android:textColor="#fff"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="8dp"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </GridLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+
+</layout>

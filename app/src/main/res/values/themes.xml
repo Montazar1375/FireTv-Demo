@@ -1,0 +1,42 @@
+<resources>
+
+    <style name="Theme.FireTV" parent="@style/Theme.Leanback" >
+        <item name="browseTitleViewLayout">@layout/lay_title</item>
+        <item name="browseRowsMarginTop">190dp</item>
+
+        <item name="fontFamily">@font/iran_sans_mobile_fa</item>
+        <item name="android:fontFamily">@font/iran_sans_mobile_fa</item>
+        <item name="fontWeight">400</item>
+        <item name="fontStyle">normal</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+
+    </style>
+
+    <style name="Theme.FireTV.Material" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="fontFamily">@font/iran_sans_mobile_fa</item>
+        <item name="android:fontFamily">@font/iran_sans_mobile_fa</item>
+        <item name="fontWeight">400</item>
+        <item name="fontStyle">normal</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+
+    </style>
+
+
+    <style name="TextLight" >
+        <item name="fontFamily">@font/iran_sans_mobile_light_fa</item>
+        <item name="android:fontFamily">@font/iran_sans_mobile_light_fa</item>
+        <item name="fontStyle">normal</item>
+        <item name="fontWeight">300</item>
+    </style>
+
+    <style name="TextBold">
+        <item name="fontFamily">@font/iran_sans_mobile_bold_fa</item>
+        <item name="android:fontFamily">@font/iran_sans_mobile_bold_fa</item>
+        <item name="fontStyle">normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:id="@+id/root"
+        android:padding="16dp">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:nextFocusRight="@id/card2"
+            android:theme="@style/Theme.MaterialComponents"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_tv_colored"
+            android:layout_margin="8dp"
+            android:layout_height="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="title placeholder"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:descendantFocusability="afterDescendants"
+            app:layout_constraintEnd_toEndOf="@+id/text_title"
+            app:layout_constraintTop_toBottomOf="@+id/text_title">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card1"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                scaleOnFocus="@{true}"
+                android:theme="@style/Theme.MaterialComponents"
+                android:nextFocusRight="@id/card2"
+                app:cardCornerRadius="21dp"
+                app:layout_constraintEnd_toEndOf="@+id/text_title"
+                app:layout_constraintTop_toBottomOf="@+id/text_title"
+                app:strokeColor="#fff"
+                app:strokeWidth="1dp"
+                tools:ignore="SpeakableTextPresentCheck" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="@string/app_name" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card2"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                scaleOnFocus="@{true}"
+                android:focusableInTouchMode="true"
+                android:theme="@style/Theme.MaterialComponents"
+                app:cardCornerRadius="21dp"
+                app:layout_constraintEnd_toStartOf="@+id/card1"
+                app:layout_constraintTop_toBottomOf="@+id/text_title"
+                app:strokeColor="#fff"
+                app:strokeWidth="1dp"
+                tools:ignore="SpeakableTextPresentCheck" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_settings"
+                    android:contentDescription="@string/app_name" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card3"
+                scaleOnFocus="@{true}"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:theme="@style/Theme.MaterialComponents"
+                app:cardCornerRadius="21dp"
+                app:layout_constraintEnd_toStartOf="@+id/card2"
+                app:layout_constraintTop_toBottomOf="@+id/text_title"
+                app:strokeColor="#fff"
+                app:strokeWidth="1dp"
+                tools:ignore="SpeakableTextPresentCheck" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_account"
+                    android:contentDescription="@string/app_name" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card4"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                scaleOnFocus="@{true}"
+                android:theme="@style/Theme.MaterialComponents"
+                app:cardCornerRadius="21dp"
+                app:layout_constraintEnd_toStartOf="@+id/card3"
+                app:layout_constraintTop_toBottomOf="@+id/text_title"
+                app:strokeColor="#fff"
+                app:strokeWidth="1dp"
+                tools:ignore="SpeakableTextPresentCheck" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_bookmark"
+                    android:contentDescription="@string/app_name" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card5"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                scaleOnFocus="@{true}"
+                android:theme="@style/Theme.MaterialComponents"
+                app:cardCornerRadius="21dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/card4"
+                app:layout_constraintTop_toBottomOf="@+id/text_title"
+                app:strokeColor="#fff"
+                app:strokeWidth="1dp"
+                tools:ignore="SpeakableTextPresentCheck" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_home"
+                    android:contentDescription="@string/app_name" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
