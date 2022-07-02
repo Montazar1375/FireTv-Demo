@@ -19,12 +19,11 @@
         android:layout_marginRight="8dp"
         app:cardCornerRadius="12dp"
         android:layout_marginBottom="24dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
         android:theme="@style/Theme.MaterialComponents"
         tools:ignore="SpeakableTextPresentCheck">
 
         <ImageView
+            android:id="@+id/videoImg"
             srcPlaceHolder="@{@drawable/movie}"
             srcUrl="@{video.imgUrl}"
             android:layout_width="match_parent"
@@ -32,9 +31,11 @@
             android:layout_gravity="top"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/movie" />
+            android:src="@drawable/movie"
+            android:contentDescription="@string/app_name" />
 
         <TextView
+            android:id="@+id/videoName"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_gravity="bottom"

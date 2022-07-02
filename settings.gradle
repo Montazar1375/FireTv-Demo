@@ -12,8 +12,8 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url "https://jitpack.io" }
         maven { url "https://jcenter.bintray.com/" }
-        maven { url "https://maven.neshan.org/artifactory/public-maven" }
     }
 }
 rootProject.name = "FireTV"
 include ':app'
+include ':lib'

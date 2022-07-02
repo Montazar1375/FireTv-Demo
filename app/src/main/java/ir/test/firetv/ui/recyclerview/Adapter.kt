@@ -1,5 +1,6 @@
 package ir.test.firetv.ui.recyclerview
 
+import android.os.Build
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
@@ -46,6 +47,12 @@ class Adapter : BaseMultiItemQuickAdapter<MultipleItem, BaseDataBindingHolder<*>
 
         when (item.itemT) {
             ItemType.MOVIE -> (holder.dataBinding as ItemMovieBinding).let {
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    it.root.focusable = View.FOCUSABLE
+                }
+                it.root.isFocusableInTouchMode = true
+
 
                 it.video = item.content as Video?
 

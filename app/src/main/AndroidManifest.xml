@@ -19,9 +19,13 @@
         android:theme="@style/Theme.FireTV"
         android:windowSoftInputMode="adjustPan|stateHidden">
         <activity
-            android:name=".ui.recyclerview.RecyclerViewActivity"
+            android:name=".ui.huma.HumaVHActivity"
             android:theme="@style/Theme.FireTV.Material"
             android:exported="false" />
+        <activity
+            android:name=".ui.recyclerview.RecyclerViewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FireTV.Material" />
         <activity
             android:name=".ui.leanback.LeanBackActivity"
             android:exported="false"

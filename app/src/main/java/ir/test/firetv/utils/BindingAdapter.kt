@@ -15,9 +15,7 @@ val fadeFactory: DrawableCrossFadeFactory =
 
 @BindingAdapter("srcUrl", "srcPlaceHolder", "srcFade", requireAll = false)
 fun ImageView.setImage(
-    srcUrl: String?,
-    srcPlaceHolder: Drawable? = null,
-    srcFade: Boolean? = null
+    srcUrl: String?, srcPlaceHolder: Drawable? = null, srcFade: Boolean? = null
 ) {
     if (srcUrl.isNullOrEmpty())
         Glide.with(this).clear(this)

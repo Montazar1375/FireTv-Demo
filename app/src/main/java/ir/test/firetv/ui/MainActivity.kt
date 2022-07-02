@@ -7,6 +7,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.bumptech.glide.Glide
 import ir.test.firetv.R
 import ir.test.firetv.databinding.ActivityMainBinding
+import ir.test.firetv.ui.huma.HumaVHActivity
 import ir.test.firetv.ui.leanback.LeanBackActivity
 import ir.test.firetv.ui.recyclerview.RecyclerViewActivity
 
@@ -25,6 +26,10 @@ class MainActivity : AppCompatActivity() {
 
         bind.card2.setOnClickListener {
             startActivity(Intent(this@MainActivity, RecyclerViewActivity::class.java))
+        }
+
+        bind.card3.setOnClickListener {
+            startActivity(Intent(this@MainActivity, HumaVHActivity::class.java))
         }
 
         bind.logo.setOnFocusChangeListener { v, hasFocus ->

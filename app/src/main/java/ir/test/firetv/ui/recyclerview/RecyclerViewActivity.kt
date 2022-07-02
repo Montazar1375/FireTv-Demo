@@ -26,7 +26,7 @@ class RecyclerViewActivity : AppCompatActivity() {
         bind.header.textTitle.text = "برنامه تلقزیونی قهقرا"
 
         val adapter = Adapter()
-        adapter.setOnRowChange { row, view, selectedVideo ->
+        adapter.setOnRowChange { row, _, selectedVideo ->
             bind.appBarLayout.setExpanded(row == 0)
 
             Glide.with(this)

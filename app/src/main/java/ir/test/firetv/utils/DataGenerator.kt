@@ -14,7 +14,7 @@ object DataGenerator {
                     i.toString(),
                     "عنوان فیلم $i",
                     "نمونه آزمایشی ردیف شماره $i",
-                    "https://picsum.photos/300?random=$imgRand",
+                    "https://picsum.photos/200?random=$imgRand",
                     "5"
                 )
             )
